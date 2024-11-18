@@ -1,6 +1,6 @@
 "use client";
 
-import { AppShell, Burger } from "@mantine/core";
+import { AppShell } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import AppShellHeader from "../AppShellHeader/AppShellHeader";
 
@@ -20,7 +20,6 @@ const AppShellComponent = ({ children }: AppShellComponentProps) => {
         collapsed: { mobile: !opened, desktop: true },
       }}
       withBorder={false}
-      padding="md"
     >
       <AppShell.Header>
         <AppShell.Header>
