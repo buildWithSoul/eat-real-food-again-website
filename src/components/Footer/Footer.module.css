@@ -1,0 +1,145 @@
+.footer {
+  background-color: #1B1B1B;
+  color: #fff;
+  padding: 30px 44px 85px;
+
+  .footerLogo {
+    height: 92px;
+    width: 92px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+
+  .linksContainer {
+    margin: 0 auto;
+    margin-bottom: 48px;
+    text-align: center;
+
+    .linksTitle {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .link {
+        &:hover {
+          color: #539C56;
+        }
+      }
+    }
+  }
+
+  .socialLinksContainer {
+    margin: 0 auto;
+    text-align: center;
+
+    .linksTitle {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .socialLinks {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    
+      .socialLink {
+        background-color: #539C56;
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .icon {
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+  
+  .divider {
+    margin: 80px 0 58px;
+    border: .5px solid #FFFFFF80;
+  }
+
+  .footerBottom {
+    .copyrightContainer {
+      font-size: 16px;
+      color: #FFFFFF80;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .legalLinks {
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    background-color: #1B1B1B;
+    color: #fff;
+    padding: 74px 135px 38px;
+
+    .footerTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 64px;
+    }
+  
+    .footerLogo {
+      height: 112px;
+      width: 112px;
+      margin: 0;
+    }
+  
+    .linksContainer {
+      text-align: left;
+    }
+  
+    .socialLinksContainer {
+      text-align: left;
+    }
+    
+    .divider {
+      margin: 54px 0 42px;
+    }
+  
+    .footerBottom {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .copyrightContainer {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 0;
+      }
+  
+      .legalLinks {
+        gap: 80px;
+        align-items: center;
+        margin-top: 0;
+      }
+    }
+  }
+}

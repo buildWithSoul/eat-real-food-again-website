@@ -6,6 +6,7 @@ import "@mantine/core/styles.css";
 
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import AppShellComponent from "@/components/AppShell/AppShell";
+import Footer from "@/components/Footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,6 +37,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <MantineProvider>
           <AppShellComponent>{children}</AppShellComponent>
+          <footer>
+            <Footer />
+          </footer>
         </MantineProvider>
       </body>
     </html>
