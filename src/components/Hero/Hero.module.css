@@ -1,0 +1,151 @@
+.heroContainer {
+  max-width: 600px;
+  padding: 0 24px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 38px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.leftHero {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heroSubText {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  color: #539C56;
+}
+
+.heroTitle {
+  color: var(--mantine-color-black);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.heroBodyText {
+  font-size: 14px;
+}
+
+.leftHeroBottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroButton {
+  width: 140px;
+  height: 40px;
+  --button-bg: #539C56;
+  --button-radius: 20px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #539C56;
+    opacity: 0.9;
+  }
+}
+
+.rightHero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImageContainer {
+  width: fit-content;
+  position: relative;
+}
+
+.dashedCircle {
+  position: absolute;
+  width: 230px;
+  top: -10px;
+  left: -93px;
+  z-index: 0;
+}
+
+.heroImage {
+  position: relative;
+  width: 327px;
+  height: 342px;
+  border-radius: 100px 40px 40px 40px;
+  z-index: 1;
+}
+
+.blobDesign {
+  position: absolute;
+  width: 215px;
+  bottom: -10px;
+  right: -60px;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .heroContainer {
+    max-width: 1540px;
+    flex-direction: row;
+    padding-bottom: 40px;
+  }
+
+  .heroTitle {
+    font-size: 48px;
+  }
+
+  .heroBodyText {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1056px) {
+  .heroContainer {
+    height: 95vh;
+    padding: 0 100px;
+    gap: 80px;
+  }
+
+  .leftHero {
+    max-width: 658px;
+  }
+
+  .heroTitle {
+    font-size: 56px;
+  }
+
+  .heroBodyText {
+    font-size: 22px;
+  }
+
+  .exploreText {
+    font-size: 18px;
+  }
+
+  .rightHero {
+    justify-content: flex-end;
+  }
+
+  .dashedCircle {
+    width: 260px;
+    top: -20px;
+    left: -120px;
+  }
+
+  .heroImage {
+    width: 524px;
+    height: 548px;
+  }
+
+  .blobDesign {
+    width: 328px;
+    bottom: 120px;
+    right: -100px;
+  }
+}

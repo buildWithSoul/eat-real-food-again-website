@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import '@mantine/core/styles.css';
+import "@mantine/core/styles.css";
 
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
-
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import AppShellComponent from "@/components/AppShell/AppShell";
+import Footer from "@/components/Footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,10 +32,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+        </style>
         <ColorSchemeScript />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <AppShellComponent>{children}</AppShellComponent>
+          <footer>
+            <Footer />
+          </footer>
+        </MantineProvider>
       </body>
     </html>
   );

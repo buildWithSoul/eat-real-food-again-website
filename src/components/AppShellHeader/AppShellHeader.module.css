@@ -1,0 +1,83 @@
+.appShellHeader {
+  height: 85px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .spacer {
+    height: 48px;
+    width: 48px;
+  }
+
+  .headerLinks {
+    display: none;
+  }
+
+  .headerLink {
+    color: #1B1B1B;
+    font-size: 16px;
+
+    &:hover {
+      color: #539C56;
+    }
+  }
+
+  .headerButtons {
+    display: none;
+  }
+
+  .headerButton {
+    height: 48px;
+    border-radius: 24px;
+    background-color: #539C56;
+  }
+
+  .headerButton:nth-of-type(1) {
+    background-color: transparent;
+    color: #539C56;
+    border: 1px solid #539C56;
+  }
+
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .burger {
+    border: 1px solid #1B1B1B33;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .appShellHeader {
+    height: 112px;
+    padding: 0 80px;
+    .spacer {
+      display: none;
+    }
+
+    .logo {
+      height: 65px;
+      width: 70px;
+    }
+  
+    .headerLinks {
+      display: flex;
+      gap: 40px;
+      padding: 0 16px;
+    }
+  
+    .headerButtons {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
+}
