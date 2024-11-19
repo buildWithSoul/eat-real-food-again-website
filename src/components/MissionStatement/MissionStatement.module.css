@@ -1,0 +1,137 @@
+.missionStatement {
+  width: 80%;
+  margin: 0 auto;
+  padding: 74px 28px;
+  text-align: center;
+  background-color: #F1F7F1;
+  border-radius: 16px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+
+.sectionSubtitle {
+  font-size: 20px;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #539C56;
+}
+
+.sectionTitle {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.sectionDescription {
+  font-size: 16px;
+  line-height: 32px;
+  color: #1B1B1B80;
+  max-width: 534px;
+  margin: 0 auto;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  overflow-x: visible;
+}
+
+.card {
+  background-color: #fff;
+  height: 336px;
+  width: 328px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: -24px 24px 48px 0px #00000017;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 46px 24px;
+  padding-top: 66px;
+}
+
+.cardIconContainer {
+  width: 112px;
+  height: 112px;
+  background-color: #539C56;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.cardContent {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.cardDescription {
+  font-size: 16px;
+  line-height: 32px;
+  color: #1B1B1B80;
+  white-space: normal;
+}
+
+@media (min-width: 1024px) {
+  .missionStatement {
+    max-width: 970px;
+  }
+
+  .textContainer {
+    margin-bottom: 96px;
+  }
+
+  .sectionSubtitle {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .sectionTitle {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .cardsContainer {
+    overflow-x: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    white-space: nowrap;
+  }
+
+  .card {
+    height: 304px;
+    width: 370px;
+    overflow: none;
+  }
+}
