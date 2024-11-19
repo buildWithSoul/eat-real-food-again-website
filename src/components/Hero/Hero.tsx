@@ -6,20 +6,20 @@ const Hero = () => {
     <Box className={styles.heroContainer}>
       <Box className={styles.leftHero}>
         <Box>
-          <Text className={styles.heroSubText}>Lorem Ipsum Dolor</Text>
+          <Text className={styles.heroSubText}>We make it easier to</Text>
           <Title className={styles.heroTitle} order={1}>
-            Lorem Ipsum Dolor Sit Amet Consectetur
+            Eat Real Food in the USA.
           </Title>
         </Box>
 
         <Text className={styles.heroBodyText}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus,
-          lacus eget iaculis.
+          Welcome to the by the people for the people movement healing America
+          from the gut.
         </Text>
 
         <Box className={styles.leftHeroBottom}>
           <Button classNames={{ root: styles.heroButton }} variant="unstyled">
-            Contact Us
+            Learn More
           </Button>
         </Box>
       </Box>
