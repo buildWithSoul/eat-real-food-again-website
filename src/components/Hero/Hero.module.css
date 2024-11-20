@@ -27,12 +27,15 @@
 
 .heroTitle {
   color: var(--mantine-color-black);
-  font-size: 28px;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -2px;
   font-weight: 700;
 }
 
 .heroBodyText {
-  font-size: 14px;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .leftHeroBottom {
@@ -42,11 +45,11 @@
 }
 
 .heroButton {
-  width: 140px;
-  height: 40px;
+  width: 156px;
+  height: 48px;
   --button-bg: #539C56;
   --button-radius: 20px;
-  font-size: 14px;
+  font-size: 16px;
 
   &:hover {
     background-color: #539C56;
@@ -97,7 +100,7 @@
   }
 
   .heroTitle {
-    font-size: 48px;
+    letter-spacing: -3px;
   }
 
   .heroBodyText {
@@ -116,8 +119,15 @@
     max-width: 658px;
   }
 
+  .heroSubText {
+    font-size: 48px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+
   .heroTitle {
-    font-size: 56px;
+    font-size: 72px;
+    line-height: 80px;
   }
 
   .heroBodyText {
@@ -125,7 +135,8 @@
   }
 
   .exploreText {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 32px;
   }
 
   .rightHero {
