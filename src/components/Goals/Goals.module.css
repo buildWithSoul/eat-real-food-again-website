@@ -119,7 +119,7 @@
 }
 
 @media (min-width: 1024px) {
-  .missionStatement {
+  .goals {
     max-width: 970px;
   }
 
@@ -133,8 +133,11 @@
   }
 
   .sectionTitle {
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 43px;
+    line-height: 51px;
+    max-width: 695px;
+    align-self: center;
+    letter-spacing: -2px;
   }
 
   .cardsContainer {
@@ -145,6 +148,7 @@
   .card {
     height: auto;
     width: 120%;
+    max-width: 1114px;
     padding: 38px 40px 38px 80px;
   }
 
