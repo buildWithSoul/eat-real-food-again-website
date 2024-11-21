@@ -1,0 +1,186 @@
+.goals {
+  width: 80%;
+  margin: 0 auto;
+  padding: 74px 28px;
+  text-align: center;
+  background-color: #F1F7F1;
+  border-radius: 16px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+
+.sectionSubtitle {
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #539C56;
+}
+
+.sectionTitle {
+  font-size: 40px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.sectionDescription {
+  font-size: 16px;
+  line-height: 21px;
+  color: #1B1B1B;
+  max-width: 534px;
+  margin: 0 auto;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  overflow-x: visible;
+}
+
+.card {
+  background-color: #fff;
+  height: auto;
+  width: 328px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: -24px 24px 48px 0px #00000017;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 66px 24px 32px 24px;
+}
+
+.cardIconContainer {
+  width: 112px;
+  height: 112px;
+  background-color: #539C56;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.cardContent {
+  line-height: 32px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.cardDescription {
+  font-size: 16px;
+  line-height: 32px;
+  color: #1B1B1B;
+  white-space: normal;
+  margin-top: 20px;
+}
+
+.cardButton {
+  width: 156px;
+  height: 48px;
+  align-self: center;
+  --button-bg: #539C56;
+  --button-radius: 20px;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #539C56;
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: 1024px) {
+  .missionStatement {
+    max-width: 970px;
+  }
+
+  .textContainer {
+    margin-bottom: 40px;
+  }
+
+  .sectionSubtitle {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .sectionTitle {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .cardsContainer {
+    overflow-x: visible;
+    gap: 32px;
+  }
+
+  .card {
+    height: auto;
+    width: 120%;
+    padding: 38px 40px 38px 80px;
+  }
+
+  .cardIconContainer {
+    width: 112px;
+    height: 112px;
+    background-color: #539C56;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cardIcon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .cardContent {
+    text-align: left;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .cardDescription {
+    max-width: 534px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
+}
