@@ -3,6 +3,9 @@ import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 import JoinMovement from "@/components/JoinMovement/JoinMovement";
 import Goals from "@/components/Goals/Goals";
+import Healla from "@/components/Healla/Healla";
+import RealestTrade from "@/components/RealestTrade/RealestTrade";
+import StreetFood from "@/components/StreetFood/StreetFood";
 
 export default function Home() {
   return (
@@ -12,6 +15,9 @@ export default function Home() {
         <MissionStatement />
         <JoinMovement />
         <Goals />
+        <Healla />
+        <RealestTrade />
+        <StreetFood />
       </main>
       <footer className={styles.footer}></footer>
     </div>
