@@ -11,7 +11,7 @@ const RealestTrade = () => {
           </Text>
           <Title className={styles.heroTitle} order={2}>
             Introducing <br />
-            <span className={styles.greenText}>RealestTrade</span>
+            <span className={styles.greenText}>Realest Trade</span>
           </Title>
         </Box>
 
