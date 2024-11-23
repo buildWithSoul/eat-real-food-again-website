@@ -68,33 +68,12 @@
   justify-content: center;
 }
 
-.heroImageContainer {
-  width: fit-content;
-  position: relative;
-}
-
-.dashedCircle {
-  position: absolute;
-  width: 230px;
-  top: -10px;
-  left: -93px;
-  z-index: 0;
-}
 
 .heroImage {
-  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 100px 40px 40px 40px;
   z-index: 1;
-}
-
-.blobDesign {
-  position: absolute;
-  width: 215px;
-  bottom: -10px;
-  right: -60px;
-  z-index: 0;
 }
 
 @media (min-width: 768px) {
@@ -102,8 +81,8 @@
     max-width: 1540px;
     flex-direction: row-reverse;
     align-items: center;
-    padding-bottom: 40px;
-    margin-top: 128px;
+    margin-top: 40px;
+    padding-bottom: 0;
   }
 
   .heroTitle {
@@ -146,24 +125,8 @@
     line-height: 32px;
   }
 
-  .rightHero {
-    justify-content: flex-end;
-  }
-
-  .dashedCircle {
-    width: 260px;
-    top: -20px;
-    left: -120px;
-  }
-
   .heroImage {
     max-width: 570px;
     max-height: 516px;
-  }
-
-  .blobDesign {
-    width: 328px;
-    bottom: 120px;
-    right: -100px;
   }
 }
