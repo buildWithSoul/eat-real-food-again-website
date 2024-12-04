@@ -6,6 +6,7 @@ import Goals from "@/components/Goals/Goals";
 import Healla from "@/components/Healla/Healla";
 import RealestTrade from "@/components/RealestTrade/RealestTrade";
 import StreetFood from "@/components/StreetFood/StreetFood";
+import Auth from "@/components/Auth/Auth";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Healla />
         <RealestTrade />
         <StreetFood />
+        <Auth />
       </main>
       <footer className={styles.footer}></footer>
     </div>
