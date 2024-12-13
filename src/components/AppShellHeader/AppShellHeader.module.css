@@ -29,19 +29,34 @@
 
   .headerButton {
     height: 48px;
+    width: max-content;
     border-radius: 24px;
     background-color: #539C56;
+
+    &:hover {
+      background-color: #539C56;
+      opacity: 0.9;
+    }
+  }
+
+  .icon {
+    padding-right: 10px;
   }
 
   .headerButton:nth-of-type(1) {
     background-color: transparent;
     color: #539C56;
     border: 1px solid #539C56;
+
+    &:hover {
+      border: 1px solid rgba(83, 156, 86, 0.8);
+    }
   }
 
   .logo {
     height: 60px;
     width: 60px;
+    cursor: pointer;
   }
 
   .burger {

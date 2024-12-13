@@ -12,11 +12,13 @@ const AppShellHeader = ({ opened, toggle }: AppShellHeaderProps) => {
   return (
     <Box className={styles.appShellHeader}>
       <Box className={styles.spacer} />
-      <Image
-        className={styles.logo}
-        alt="Eat Real Food Again"
-        src={"/logo.svg"}
-      />
+      <Link href="/">
+        <Image
+          className={styles.logo}
+          alt="Eat Real Food Again"
+          src={"/logo.svg"}
+        />
+      </Link>
 
       <Box className={styles.headerLinks}>
         <Link className={styles.headerLink} href="/about">
@@ -31,7 +33,14 @@ const AppShellHeader = ({ opened, toggle }: AppShellHeaderProps) => {
       </Box>
 
       <Box className={styles.headerButtons}>
-        <Button className={styles.headerButton}>Talk To Longetivity</Button>
+        <Button className={styles.headerButton}>
+          <Image
+            className={styles.icon}
+            src={"/icon-longetivity.svg"}
+            alt="Talk To Longetivity"
+          />
+          Talk To Longetivity
+        </Button>
         <Button className={styles.headerButton}>Sign In</Button>
       </Box>
 
