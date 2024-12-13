@@ -5,7 +5,6 @@
   flex-direction: column;
   gap: 38px;
   margin: 0 auto;
-  margin-top: 40px;
   overflow-x: hidden;
   overflow: hidden;
 }
@@ -77,7 +76,7 @@
     max-width: 1540px;
     flex-direction: row;
     align-items: center;
-    margin-top: 40px;
+
   }
 
   .heroTitle {
@@ -91,7 +90,6 @@
 
 @media (min-width: 1056px) {
   .heroContainer {
-    height: 95vh;
     padding: 0 80px 0 134px;
     gap: 0;
   }

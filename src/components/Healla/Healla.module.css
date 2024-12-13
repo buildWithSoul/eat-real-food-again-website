@@ -5,7 +5,6 @@
   flex-direction: column;
   gap: 38px;
   margin: 0 auto;
-  margin-top: 40px;
   overflow-x: hidden;
   overflow: hidden;
 }
@@ -73,7 +72,6 @@
     max-width: 1540px;
     flex-direction: row-reverse;
     align-items: center;
-    margin-top: 40px;
     padding-bottom: 0;
   }
 
@@ -88,7 +86,6 @@
 
 @media (min-width: 1056px) {
   .heroContainer {
-    height: 95vh;
     padding: 0 130px;
     gap: 80px;
   }
