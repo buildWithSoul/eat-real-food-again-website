@@ -110,9 +110,9 @@
 
 @media (min-width: 1056px) {
   .heroContainer {
-    height: 95vh;
     padding: 0 100px;
     gap: 80px;
+    padding-bottom: 60px;
   }
 
   .leftHero {
@@ -156,7 +156,14 @@
 
   .blobDesign {
     width: 328px;
-    bottom: 120px;
+    /* bottom: 120px; */
     right: -100px;
   }
 }
+
+@media (min-width: 1600px) {
+  .blobDesign {
+    bottom: -10%;
+  }
+}
+

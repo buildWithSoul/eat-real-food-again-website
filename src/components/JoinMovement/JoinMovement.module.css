@@ -1,6 +1,6 @@
 .joinMovement {
   max-width: 540px;
-  margin: 64px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +70,7 @@
 @media (min-width: 1056px) {
   .joinMovement {
     max-width: 100%;
-    margin:  128px 0;
+    margin: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
