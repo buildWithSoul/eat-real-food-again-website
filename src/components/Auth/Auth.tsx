@@ -14,6 +14,25 @@ const Auth = () => {
       console.error("Error signing in with Google:", error.message);
     }
   };
+
+  const handleFacebookSignIn = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "facebook",
+    });
+    if (error) {
+      console.error("Error signing in with Facebook:", error.message);
+    }
+  };
+
+  const handleTwitterSignIn = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "twitter",
+    });
+    if (error) {
+      console.error("Error signing in with Twitter:", error.message);
+    }
+  };
+
   return (
     <Box className={styles.card}>
       <Image
@@ -32,10 +51,13 @@ const Auth = () => {
           <Button onClick={handleGoogleSignIn} className={styles.socialButton}>
             <Image alt="google" src={"/card-icon-google.svg"} />
           </Button>
-          <Button className={styles.socialButton}>
+          <Button
+            onClick={handleFacebookSignIn}
+            className={styles.socialButton}
+          >
             <Image alt="facebook" src={"/card-icon-facebook.svg"} />
           </Button>
-          <Button className={styles.socialButton}>
+          <Button onClick={handleTwitterSignIn} className={styles.socialButton}>
             <Image alt="x" src={"/card-icon-x.svg"} />
           </Button>
         </Box>
