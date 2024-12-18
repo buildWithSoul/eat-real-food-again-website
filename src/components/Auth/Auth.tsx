@@ -3,8 +3,36 @@
 import { Box, Button, Divider, Image, Text, Title } from "@mantine/core";
 import Link from "next/link";
 import styles from "../Auth/Auth.module.css";
+import { supabase } from "../../utils/supabase/client";
 
 const Auth = () => {
+  const handleGoogleSignIn = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+    if (error) {
+      console.error("Error signing in with Google:", error.message);
+    }
+  };
+
+  const handleFacebookSignIn = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "facebook",
+    });
+    if (error) {
+      console.error("Error signing in with Facebook:", error.message);
+    }
+  };
+
+  const handleTwitterSignIn = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "twitter",
+    });
+    if (error) {
+      console.error("Error signing in with Twitter:", error.message);
+    }
+  };
+
   return (
     <Box className={styles.card}>
       <Image
@@ -20,13 +48,16 @@ const Auth = () => {
         <Text className={styles.cardSubtitle}>Lorem ipsum dolor sit amet</Text>
 
         <Box className={styles.buttonGroup}>
-          <Button className={styles.socialButton}>
+          <Button onClick={handleGoogleSignIn} className={styles.socialButton}>
             <Image alt="google" src={"/card-icon-google.svg"} />
           </Button>
-          <Button className={styles.socialButton}>
+          <Button
+            onClick={handleFacebookSignIn}
+            className={styles.socialButton}
+          >
             <Image alt="facebook" src={"/card-icon-facebook.svg"} />
           </Button>
-          <Button className={styles.socialButton}>
+          <Button onClick={handleTwitterSignIn} className={styles.socialButton}>
             <Image alt="x" src={"/card-icon-x.svg"} />
           </Button>
         </Box>
