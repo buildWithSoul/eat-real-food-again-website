@@ -22,8 +22,9 @@ const Auth = () => {
     return <SignUp />
   }
 
-  return (
-    {chosenView}
+  return (<>
+      {chosenView()}
+  </>
   );
 };
 
