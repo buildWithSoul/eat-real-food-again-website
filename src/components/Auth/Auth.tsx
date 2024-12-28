@@ -9,6 +9,7 @@ import { useState } from "react";
 
 type AUTH_VIEW = 'signup' | 'login' | 'forgot_password'
 
+
 const Auth = () => {
   const [selectedView, setSelectedView] = useState<AUTH_VIEW>('signup')
 
