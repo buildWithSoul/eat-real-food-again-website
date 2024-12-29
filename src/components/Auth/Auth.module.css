@@ -87,9 +87,12 @@
     text-align: center;
     display: block;
 
+    margin-bottom: 16px;
+
     &:hover {
       color: #539C56;
       opacity: 0.9;
+      cursor: pointer;
     }
   }
 
