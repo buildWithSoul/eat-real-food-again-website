@@ -1,35 +1,70 @@
 "use client";
 
-import { Box, Button, Divider, Image, Text, Title } from "@mantine/core";
+import { useState, useEffect } from "react";
+import {
+  Box,
+  Button,
+  Divider,
+  Image,
+  Text,
+  Title,
+  Notification,
+} from "@mantine/core";
+import { IconX, IconCheck } from "@tabler/icons-react";
 import Link from "next/link";
 import styles from "../Auth/Auth.module.css";
 import { supabase } from "../../utils/supabase/client";
+import { validateEmail, validatePassword } from "../../utils/validation";
+import { Provider } from "@supabase/supabase-js";
 
-const SignUp = () => {
-  const handleGoogleSignIn = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-    });
+const SignUp: React.FC = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [error, setError] = useState<string>("");
+  const [success, setSuccess] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (error || success) {
+      const timer = setTimeout(() => {
+        setError("");
+        setSuccess("");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [error, success]);
+
+  const handleOAuthSignIn = async (provider: Provider) => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider });
     if (error) {
-      console.error("Error signing in with Google:", error.message);
+      console.error(`Error signing in with ${provider}:`, error.message);
+      setError(`Error signing in with ${provider}`);
     }
   };
 
-  const handleFacebookSignIn = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "facebook",
-    });
-    if (error) {
-      console.error("Error signing in with Facebook:", error.message);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError("");
+    setSuccess("");
+    if (!validateEmail(email)) {
+      setError("Invalid email address");
+      return;
     }
-  };
-
-  const handleTwitterSignIn = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "twitter",
-    });
+    if (!validatePassword(password)) {
+      setError(
+        "Password must be at least 8 characters long and include at least one letter and one number."
+      );
+      return;
+    }
+    setLoading(true);
+    const { error } = await supabase.auth.signUp({ email, password });
+    setLoading(false);
     if (error) {
-      console.error("Error signing in with Twitter:", error.message);
+      setError("Failed to sign up. Please try again.");
+    } else {
+      setSuccess(
+        "Sign-up successful! Please check your email to confirm your account."
+      );
     }
   };
 
@@ -43,28 +78,39 @@ const SignUp = () => {
 
       <Box className={styles.cardBody}>
         <Title className={styles.cardTitle} order={3}>
-          Lorem ipsum dolor sit amet
+          Join Us Today
         </Title>
-        <Text className={styles.cardSubtitle}>Lorem ipsum dolor sit amet</Text>
+        <Text className={styles.cardSubtitle}>
+          Create an account to get started
+        </Text>
 
         <Box className={styles.buttonGroup}>
-          <Button onClick={handleGoogleSignIn} className={styles.socialButton}>
+          <Button
+            onClick={() => handleOAuthSignIn("google")}
+            className={styles.socialButton}
+            loading={loading}
+          >
             <Image alt="google" src={"/card-icon-google.svg"} />
           </Button>
           <Button
-            onClick={handleFacebookSignIn}
+            onClick={() => handleOAuthSignIn("facebook")}
             className={styles.socialButton}
+            loading={loading}
           >
             <Image alt="facebook" src={"/card-icon-facebook.svg"} />
           </Button>
-          <Button onClick={handleTwitterSignIn} className={styles.socialButton}>
+          <Button
+            onClick={() => handleOAuthSignIn("twitter")}
+            className={styles.socialButton}
+            loading={loading}
+          >
             <Image alt="x" src={"/card-icon-x.svg"} />
           </Button>
         </Box>
 
         <Divider className={styles.cardDivider} />
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <Text className={styles.inputLabel} component="label" htmlFor="email">
             Email Address
           </Text>
@@ -73,6 +119,8 @@ const SignUp = () => {
             type="email"
             name="email"
             id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <Text
@@ -87,16 +135,42 @@ const SignUp = () => {
             type="password"
             name="password"
             id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
-          <Button className={styles.cardButton}>Sign in</Button>
+          <Button type="submit" className={styles.cardButton} loading={loading}>
+            Sign Up
+          </Button>
         </form>
+
+        {error && (
+          <Notification
+            icon={<IconX size={18} />}
+            color="red"
+            title="Bummer!"
+            mb="xl"
+          >
+            {error}
+          </Notification>
+        )}
+
+        {success && (
+          <Notification
+            icon={<IconCheck size={18} />}
+            color="teal"
+            title="All good!"
+            mb="xl"
+          >
+            {success}
+          </Notification>
+        )}
 
         <Link className={styles.authLink} href="#">
           Forgot your Password?
         </Link>
         <Link className={styles.authLink} href="#">
-          Dont have an account? Sign up
+          Already have an account? Sign in
         </Link>
       </Box>
     </Box>
