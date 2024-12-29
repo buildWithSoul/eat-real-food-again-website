@@ -1,24 +1,36 @@
 "use client";
 
+import { Box, Image } from "@mantine/core";
 import SignUp from "./SignUp";
 import { useState } from "react";
 
-type AUTH_VIEW = "signup" | "login" | "forgot_password";
+import styles from "../Auth/Auth.module.css";
+import Link from "next/link";
+import SignIn from "./SignIn";
+
+type AUTH_VIEW = "signup" | "signin" | "forgot_password";
 
 const Auth = () => {
   const [selectedView, setSelectedView] = useState<AUTH_VIEW>("signup");
 
   const chosenView = () => {
-    if (selectedView === "signup") return <SignUp />;
+    if (selectedView === "signup") return <SignUp  setSelectedView={setSelectedView}/>;
 
-    if (selectedView === "login") return <SignUp />;
+    if (selectedView === "signin") return <SignIn setSelectedView={setSelectedView} />;
 
-    if (selectedView === "forgot_password") return <SignUp />;
+    if (selectedView === "forgot_password") return <SignUp setSelectedView={setSelectedView} />;
 
-    return <SignUp />;
+    return <SignUp setSelectedView={setSelectedView} />;
   };
 
-  return <>{chosenView()}</>;
+  return <Box className={styles.card}>
+      <Image
+        className={styles.cardImage}
+        src="/image-auth.png"
+        alt="Join The Movement"
+      />
+      {chosenView()}
+  </Box>
 };
 
 export default Auth;

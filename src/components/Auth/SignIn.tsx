@@ -17,13 +17,13 @@ import { validateEmail, validatePassword } from "../../utils/validation";
 import { Provider } from "@supabase/supabase-js";
 import Link from "next/link";
 
-type SignUpProps = {
+type SignInProps = {
     setSelectedView: Function
 }
 
-const SignUp = ({
+const SignIn = ({
     setSelectedView
-}: SignUpProps) => {
+}: SignInProps) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -77,10 +77,10 @@ const SignUp = ({
   return (
       <Box className={styles.cardBody}>
         <Title className={styles.cardTitle} order={3}>
-          Join Us Today
+          Sign In Today
         </Title>
         <Text className={styles.cardSubtitle}>
-          Create an account to get started
+          Yeah
         </Text>
 
         <Box className={styles.buttonGroup}>
@@ -167,8 +167,7 @@ const SignUp = ({
         <Text className={styles.authLink} onClick={() => {setSelectedView ? setSelectedView('forgot_password') : null}}>
           Forgot your Password?
         </Text>
-
-        <Text className={styles.authLink} onClick={() => {setSelectedView ? setSelectedView('signin') : null}}>
+        <Text className={styles.authLink} onClick={() => {setSelectedView ? setSelectedView('sign_in') : null}}>
           Already have an account? Sign in
         </Text>
 
@@ -176,4 +175,4 @@ const SignUp = ({
   );
 };
 
-export default SignUp;
+export default SignIn;
