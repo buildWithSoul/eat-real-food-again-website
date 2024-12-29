@@ -15,15 +15,12 @@ import styles from "../Auth/Auth.module.css";
 import { supabase } from "../../utils/supabase/client";
 import { validateEmail, validatePassword } from "../../utils/validation";
 import { Provider } from "@supabase/supabase-js";
-import Link from "next/link";
 
 type SignUpProps = {
-    setSelectedView: Function
-}
+  setSelectedView: (view: "signup" | "signin" | "forgot_password") => void;
+};
 
-const SignUp = ({
-    setSelectedView
-}: SignUpProps) => {
+const SignUp = ({ setSelectedView }: SignUpProps) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -75,104 +72,109 @@ const SignUp = ({
   };
 
   return (
-      <Box className={styles.cardBody}>
-        <Title className={styles.cardTitle} order={3}>
-          Join Us Today
-        </Title>
-        <Text className={styles.cardSubtitle}>
-          Create an account to get started
-        </Text>
+    <Box className={styles.cardBody}>
+      <Title className={styles.cardTitle} order={3}>
+        Join Us Today
+      </Title>
+      <Text className={styles.cardSubtitle}>
+        Create an account to get started
+      </Text>
 
-        <Box className={styles.buttonGroup}>
-          <Button
-            onClick={() => handleOAuthSignIn("google")}
-            className={styles.socialButton}
-            loading={loading}
-          >
-            <Image alt="google" src={"/card-icon-google.svg"} />
-          </Button>
-          <Button
-            onClick={() => handleOAuthSignIn("facebook")}
-            className={styles.socialButton}
-            loading={loading}
-          >
-            <Image alt="facebook" src={"/card-icon-facebook.svg"} />
-          </Button>
-          <Button
-            onClick={() => handleOAuthSignIn("twitter")}
-            className={styles.socialButton}
-            loading={loading}
-          >
-            <Image alt="x" src={"/card-icon-x.svg"} />
-          </Button>
-        </Box>
-
-        <Divider className={styles.cardDivider} />
-
-        <form onSubmit={handleSubmit}>
-          <Text className={styles.inputLabel} component="label" htmlFor="email">
-            Email Address
-          </Text>
-          <input
-            className={styles.input}
-            type="email"
-            name="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <Text
-            className={styles.inputLabel}
-            component="label"
-            htmlFor="password"
-          >
-            Password
-          </Text>
-          <input
-            className={styles.input}
-            type="password"
-            name="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <Button type="submit" className={styles.cardButton} loading={loading}>
-            Sign Up
-          </Button>
-        </form>
-
-        {error && (
-          <Notification
-            icon={<IconX size={18} />}
-            color="red"
-            title="Bummer!"
-            mb="xl"
-          >
-            {error}
-          </Notification>
-        )}
-
-        {success && (
-          <Notification
-            icon={<IconCheck size={18} />}
-            color="teal"
-            title="All good!"
-            mb="xl"
-          >
-            {success}
-          </Notification>
-        )}
-        <Text className={styles.authLink} onClick={() => {setSelectedView ? setSelectedView('forgot_password') : null}}>
-          Forgot your Password?
-        </Text>
-
-        <Text className={styles.authLink} onClick={() => {setSelectedView ? setSelectedView('signin') : null}}>
-          Already have an account? Sign in
-        </Text>
-
+      <Box className={styles.buttonGroup}>
+        <Button
+          onClick={() => handleOAuthSignIn("google")}
+          className={styles.socialButton}
+          loading={loading}
+        >
+          <Image alt="google" src={"/card-icon-google.svg"} />
+        </Button>
+        <Button
+          onClick={() => handleOAuthSignIn("facebook")}
+          className={styles.socialButton}
+          loading={loading}
+        >
+          <Image alt="facebook" src={"/card-icon-facebook.svg"} />
+        </Button>
+        <Button
+          onClick={() => handleOAuthSignIn("twitter")}
+          className={styles.socialButton}
+          loading={loading}
+        >
+          <Image alt="x" src={"/card-icon-x.svg"} />
+        </Button>
       </Box>
+
+      <Divider className={styles.cardDivider} />
+
+      <form onSubmit={handleSubmit}>
+        <Text className={styles.inputLabel} component="label" htmlFor="email">
+          Email Address
+        </Text>
+        <input
+          className={styles.input}
+          type="email"
+          name="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <Text
+          className={styles.inputLabel}
+          component="label"
+          htmlFor="password"
+        >
+          Password
+        </Text>
+        <input
+          className={styles.input}
+          type="password"
+          name="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <Button type="submit" className={styles.cardButton} loading={loading}>
+          Sign Up
+        </Button>
+      </form>
+
+      {error && (
+        <Notification
+          icon={<IconX size={18} />}
+          color="red"
+          title="Bummer!"
+          mb="xl"
+        >
+          {error}
+        </Notification>
+      )}
+
+      {success && (
+        <Notification
+          icon={<IconCheck size={18} />}
+          color="teal"
+          title="All good!"
+          mb="xl"
+        >
+          {success}
+        </Notification>
+      )}
+      <Text
+        className={styles.authLink}
+        onClick={() => setSelectedView("forgot_password")}
+      >
+        Forgot your Password?
+      </Text>
+
+      <Text
+        className={styles.authLink}
+        onClick={() => setSelectedView("signin")}
+      >
+        Already have an account? Sign in
+      </Text>
+    </Box>
   );
 };
 
