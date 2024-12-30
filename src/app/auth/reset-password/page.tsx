@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "../../utils/supabase/client";
+import { supabase } from "../../../utils/supabase/client";
 import { Box, Button, Text, Title, Notification } from "@mantine/core";
 import { IconX, IconCheck } from "@tabler/icons-react";
 import styles from "./page.module.css";
