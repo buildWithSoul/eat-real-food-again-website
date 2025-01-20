@@ -13,13 +13,13 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Hero />
-        <MissionStatement />
-        <JoinMovement />
+        {/*<MissionStatement /> 
+         <JoinMovement />*/}
         <Goals />
         <Healla />
         <RealestTrade />
         <StreetFood />
-        <Auth />
+        {/*<Auth />*/}
       </main>
       <footer className={styles.footer}></footer>
     </div>

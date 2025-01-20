@@ -20,6 +20,7 @@ const AppShellHeader = ({ opened, toggle }: AppShellHeaderProps) => {
         />
       </Link>
 
+{/* 
       <Box className={styles.headerLinks}>
         <Link className={styles.headerLink} href="/about">
           The Movement
@@ -50,7 +51,7 @@ const AppShellHeader = ({ opened, toggle }: AppShellHeaderProps) => {
         onClick={toggle}
         hiddenFrom="sm"
         size="md"
-      />
+      />*/}
     </Box>
   );
 };

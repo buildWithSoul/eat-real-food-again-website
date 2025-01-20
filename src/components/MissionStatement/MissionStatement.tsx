@@ -13,8 +13,7 @@ const MissionStatement = () => {
           Our Mission
         </Title>
         <Text className={styles.sectionDescription}>
-          We are a movement of Americans improving their quality of life through
-          making better investments in the food they consume.
+          We are a movement facilitating consumers and producers to regain control of the food industry and shifting the KPIs to include consumer health and fair trade.
         </Text>
       </Box>
 
@@ -32,8 +31,7 @@ const MissionStatement = () => {
               Real Ingredients
             </Title>
             <Text className={styles.cardDescription}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              maximus, lacus eget iaculis molestie, erat quam pharetra tellus
+                
             </Text>
           </Box>
         </Box>
@@ -51,8 +49,6 @@ const MissionStatement = () => {
               Reliable Information
             </Title>
             <Text className={styles.cardDescription}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              maximus, lacus eget iaculis molestie, erat quam pharetra tellus
             </Text>
           </Box>
         </Box>
@@ -70,8 +66,6 @@ const MissionStatement = () => {
               Respected Farmers
             </Title>
             <Text className={styles.cardDescription}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              maximus, lacus eget iaculis molestie, erat quam pharetra tellus
             </Text>
           </Box>
         </Box>

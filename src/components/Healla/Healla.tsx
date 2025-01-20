@@ -14,12 +14,11 @@ const Healla = () => {
         </Box>
 
         <Text className={styles.heroBodyText}>
-          Information platform for Americans who have improved their own
-          wellness and longevity by eating real food.
+          Information platform for prevention and recovery from diet and lifestyle changes from people with first hand experience on the conditions they speak about.
         </Text>
 
         <Box className={styles.leftHeroBottom}>
-          <Button classNames={{ root: styles.heroButton }} variant="unstyled">
+          <Button classNames={{ root: styles.heroButton }} variant="unstyled" disabled>
             Learn More
           </Button>
         </Box>

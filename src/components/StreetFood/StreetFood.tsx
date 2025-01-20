@@ -14,13 +14,12 @@ const StreetFood = () => {
         </Box>
 
         <Text className={styles.heroBodyText}>
-          Information platform for Americans who have improved their own
-          wellness and longevity by eating real food.
+          Find food from prepared food vendors cooking their food in healthy oil and using healthy ingredients.
         </Text>
 
         <Box className={styles.leftHeroBottom}>
-          <Button classNames={{ root: styles.heroButton }} variant="unstyled">
-            Learn More
+          <Button classNames={{ root: styles.heroButton }} variant="unstyled" disabled>
+            Coming Soon..
           </Button>
         </Box>
       </Box>

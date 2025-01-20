@@ -16,13 +16,12 @@ const RealestTrade = () => {
         </Box>
 
         <Text className={styles.heroBodyText}>
-          The first certification where farmers certify they are not being
-          exploited.
-        </Text>
+           A new standard for the international food supply chain ensuring farmers are treated fairly and consumer health is priotized.        
+          </Text>
 
         <Box className={styles.leftHeroBottom}>
-          <Button classNames={{ root: styles.heroButton }} variant="unstyled">
-            Add it now
+          <Button classNames={{ root: styles.heroButton }} variant="unstyled" disabled>
+            Coming Soon
           </Button>
         </Box>
       </Box>
