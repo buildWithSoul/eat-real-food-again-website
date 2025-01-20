@@ -28,7 +28,7 @@ const JoinMovement = () => {
               vote, you need to rock the market share.
             </Text>
           </Box>
-          <Text className={styles.quoteAuthor}>-Delly Soul</Text>
+          <Text className={styles.quoteAuthor}>- Delly Soul</Text>
         </Box>
       </Box>
       <Box className={styles.rightSection}>
