@@ -34,7 +34,7 @@ export default function RootLayout({
       <head>
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+          url(&apos;https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap&apos;);
         </style>
         <ColorSchemeScript />
       </head>

@@ -1,14 +1,18 @@
 import React from "react";
-import { Box, Burger, Button, Image } from "@mantine/core";
+import { Box, Image } from "@mantine/core";
 import styles from "./AppShellHeader.module.css";
 import Link from "next/link";
 
+/*
 interface AppShellHeaderProps {
   opened: boolean;
   toggle: () => void;
 }
+  */
 
-const AppShellHeader = ({ opened, toggle }: AppShellHeaderProps) => {
+const AppShellHeader = (
+  /*{ opened, toggle }: AppShellHeaderProps*/
+) => {
   return (
     <Box className={styles.appShellHeader}>
       <Box className={styles.spacer} />
