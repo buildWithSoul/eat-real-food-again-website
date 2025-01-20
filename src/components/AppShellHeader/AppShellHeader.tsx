@@ -3,15 +3,13 @@ import { Box, Image } from "@mantine/core";
 import styles from "./AppShellHeader.module.css";
 import Link from "next/link";
 
-/*
 interface AppShellHeaderProps {
   opened: boolean;
   toggle: () => void;
 }
-  */
 
 const AppShellHeader = (
-  /*{ opened, toggle }: AppShellHeaderProps*/
+  { opened, toggle }: AppShellHeaderProps
 ) => {
   return (
     <Box className={styles.appShellHeader}>
@@ -22,6 +20,8 @@ const AppShellHeader = (
           alt="Eat Real Food Again"
           src={"/logo.svg"}
         />
+        {opened && <span onClick={toggle}> </span> // disable this once we re-enable the other things
+        } 
       </Link>
 
 {/* 
